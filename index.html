@@ -8,11 +8,22 @@
 </head>
 <body>
     <form action="">
-        <label name="lblusername">UserName</label>
-        <input type="text" name="txtusername">
+        <label id="lblusername" name="lblusername">UserName</label>
+        <input type="text" name="txtusername" id="txtusername">
         <label for="" name="lblpassword">Password</label>
-        <input type="password" name="txtpassword" placeholder="Please enter password">
-        <button type="submit" id="login" name="btnlogin">login</button>
+        <input type="password" name="txtpassword" id="txtpassword" placeholder="Please enter password">
+        <button type="submit" id="login" name="btnlogin" onclick="login()">login</button>
     </form>
+    <script>
+        function login() {
+            var username = document.getElementById("txtusername").value;
+            var password = document.getElementById("txtpassword").value;
+            if(username=="admin" && password == "admin") {
+                alert("Dang nhap thanh cong");
+            }else{
+                alert("Dang nhap that bai");
+            }
+        }
+    </script>
 </body>
 </html>
